@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const VisualMoments = ({ data }) => {
   const sectionTitle = data?.gallery?.title || "Visual moments";
@@ -25,17 +26,26 @@ const VisualMoments = ({ data }) => {
   };
 
   return (
-    <section className="py-20 bg-zinc-950">
-      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center">
+    <section className="py-20 bg-zinc-950 relative overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/assets/background/palma.png')" }}>
+      {/* Overlay oscuro para asegurar legibilidad del texto */}
+      <div className="absolute inset-0 bg-black/30"></div>
+      {/* Decoración Tropical */}
+      <img src="/assets/palm-left.png" alt="" className="absolute -left-20 top-1/2 -translate-y-1/2 w-[500px] opacity-10 pointer-events-none blur-sm rotate-12" />
+      <img src="/assets/palm-right.png" alt="" className="absolute -right-20 top-1/2 -translate-y-1/2 w-[500px] opacity-10 pointer-events-none blur-sm -rotate-12" />
+
+      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center relative z-10">
         
         {/* Lado del Texto */}
-        <div className="md:w-1/3 mb-10 md:mb-0 pr-10">
+        <div className="md:w-1/3 mb-10 md:mb-0 pr-10 text-center">
           <h2 className="text-5xl font-bold text-white mb-6 leading-tight">
             {sectionTitle}
           </h2>
-          <p className="text-zinc-400 text-lg leading-relaxed">
+          <p className="text-zinc-400 text-lg leading-relaxed mb-8">
             {sectionDesc}
           </p>
+          <Link to="/gallery" className="inline-block px-8 py-3 rounded-full border border-white/20 text-white text-xs font-bold uppercase tracking-widest hover:bg-[#FFD700] hover:text-black hover:border-[#FFD700] transition-all duration-300">
+            Gallery
+          </Link>
         </div>
 
         {/* Lado del Slider / Galería */}
