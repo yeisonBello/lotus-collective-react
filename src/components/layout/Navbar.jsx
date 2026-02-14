@@ -42,6 +42,15 @@ const Navbar = () => {
         >
           Members
         </a>
+        <Link
+          to="/gallery"
+          className="transition-colors"
+          style={{ transitionDuration: 'var(--timing-quarter)' }}
+          onMouseEnter={(e) => (e.target.style.color = 'var(--brass-bright)')}
+          onMouseLeave={(e) => (e.target.style.color = 'white')}
+        >
+          Gallery
+        </Link>
         <a
           href="#shows"
           className="transition-colors"

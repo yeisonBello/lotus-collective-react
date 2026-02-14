@@ -1,23 +1,33 @@
-// Pull the URL from the .env file
-const BASE_URL = import.meta.env.VITE_IMAGE_BASE_URL;
+// Use Vite's glob import to get all images from src/assets/gallery
+// eager: true ensures they are imported synchronously
+// as: 'url' gives us the string path to the asset
+const modules = import.meta.glob('/src/assets/gallery/**/*.{png,jpg,jpeg,webp}', {
+  eager: true,
+  query: '?url',
+  import: 'default'
+});
+
+// Helper function to group images by their parent folder
+const getImagesByFolder = (folderName) => {
+  return Object.keys(modules)
+    .filter((path) => path.includes(`/src/assets/gallery/${folderName}/`))
+    .sort() // Ensure alphabetical order
+    .map((path) => modules[path]);
+};
 
 export const lotusImages = {
-  // 1. Carousel Section (Array of images)
-  heroCarousel: [
-    `${BASE_URL}/hero-carousel/hero-carousel-01.png`,
-    `${BASE_URL}/hero-carousel/hero-carousel-01.png`,
-    `${BASE_URL}/hero-carousel/hero-carousel-01.png`,
-  ],
+  // 1. Carousel Section
+  heroCarousel: getImagesByFolder('hero-carousel'),
 
-  // 2. Studio Section (2x1)
-  studio: `${BASE_URL}/studio/studio-01.png`,
+  // 2. Studio Section
+  studio: getImagesByFolder('studio'),
 
-  // 4. Live Energy Section (1x2)
-  energy: `${BASE_URL}/live-energy/live-energy-01.png`,
+  // 4. Live Energy Section
+  energy: getImagesByFolder('live-energy'),
 
-  // 6. Detail Section (1x1)
-  gear: `${BASE_URL}/branding/branding-01.png`,
+  // 6. Detail Section
+  gear: getImagesByFolder('branding'),
 
-  // 7. Venue Section (1x1)
-  venue: `${BASE_URL}/archive/archive-01.png`,
+  // 7. Venue Section
+  venue: getImagesByFolder('archive'),
 };

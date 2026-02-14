@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import EdgarExperience from './pages/EdgarExperience';
 import Discography from './pages/Discography';
 import News from './pages/News';
+import Gallery from './pages/Gallery';
+import FloatingAudioControl from './pages/FloatingAudioControl';
 
 function App() {
   return (
@@ -22,10 +24,14 @@ function App() {
           <Route path="/the-edgar-experience" element={<EdgarExperience />} />
           <Route path="/discography" element={<Discography />} />
           <Route path="/news" element={<News />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
 
         {/* Footer */}
         <Footer />
+
+        {/* Floating Audio Control */}
+        <FloatingAudioControl />
       </div>
     </Router>
   );

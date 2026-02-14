@@ -112,9 +112,8 @@ const ChapterImage = ({ src, alt, isInView, alignment }) => (
     initial={{ filter: "grayscale(100%) brightness(0.7)", scale: 1.1 }}
     animate={isInView ? { filter: "grayscale(0%) brightness(1)", scale: 1 } : { filter: "grayscale(100%) brightness(0.7)", scale: 1.1 }}
     transition={{ duration: 1.2, ease: "easeOut" }}
-    className={`aspect-[3/2] rounded-2xl overflow-hidden border border-white/5 shadow-2xl ${
-      alignment === 'left' ? 'md:mr-8' : 'md:ml-8'
-    }`}
+    className={`aspect-[3/2] rounded-2xl overflow-hidden border border-white/5 shadow-2xl ${alignment === 'left' ? 'md:mr-8' : 'md:ml-8'
+      }`}
   >
     <motion.img
       src={src}
@@ -233,9 +232,7 @@ const StoryChapter = ({ chapter, index, total }) => {
       aria-label={`Story chapter ${index + 1} of ${total}`}
     >
       {/* Chapter Content - Grid with Timeline Column */}
-      <div className={`grid grid-cols-1 md:grid-cols-[5fr_auto_6fr] gap-8 md:gap-12 items-center ${
-        chapter.alignment === 'right' ? 'md:grid-cols-[6fr_auto_5fr]' : ''
-      }`}>
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 md:gap-12 items-center">
         {/* Image */}
         <div className={chapter.alignment === 'right' ? 'md:order-3' : 'md:order-1'}>
           <ChapterImage
@@ -270,9 +267,8 @@ const BandStory = ({ chapters = storyChapters, showTimeline = true, compactMode 
   return (
     <section
       id="band-story"
-      className={`relative bg-[#050505] border-t border-white/5 ${
-        compactMode ? 'py-24 px-6' : 'py-40 px-6'
-      }`}
+      className={`relative bg-[#050505] border-t border-white/5 ${compactMode ? 'py-24 px-6' : 'py-40 px-6'
+        }`}
       aria-labelledby="band-story-title"
     >
       {/* Container */}
@@ -332,10 +328,11 @@ const BandStory = ({ chapters = storyChapters, showTimeline = true, compactMode 
               <div
                 className="hidden md:block absolute top-0 bottom-0 w-0.5 pointer-events-none"
                 style={{
-                  left: 'calc(41.67% + 30px)', // Centered in timeline column
+                  left: '50%',
+                  transform: 'translateX(-50%)',
                   background: 'linear-gradient(180deg, #D4AF37 0%, #FFD700 50%, #D4AF37 100%)',
                   opacity: 0.3,
-                  zIndex: 1
+                  zIndex: 0
                 }}
                 aria-hidden="true"
               />
