@@ -121,7 +121,7 @@ export const shows = [
     venue: 'Historic Downtown Miami',
     address: '174 E Flagler St, Miami, FL 33131',
     description: 'Join us at Flagler Street in Historic Downtown Miami. This will be an afternoon of live music featuring songs from our recent debut album Where Is Edgar?',
-    buttonText: 'Details',
+    buttonText: 'DETAILS',
     buttonColor: '#FF3B30'
   },
   {
@@ -131,7 +131,7 @@ export const shows = [
     venue: 'Magic 13 Brewing Co',
     address: '340 NE 61st St, Miami, FL 33137',
     description: 'Join us at Magic 13 Brewing Co. for a night of live music. We\'ll be performing songs from our recent debut album Where Is Edgar? along with classics.',
-    buttonText: 'Info',
+    buttonText: 'DETAILS',
     buttonColor: '#10b981'
   },
   {
@@ -141,7 +141,7 @@ export const shows = [
     venue: 'Regener8 Farm',
     address: '17300 SW 177th Ave Miami, FL 33187',
     description: 'Join us at Regener8 Farm for a morning of live music surrounded by a truly unique atmosphere. We\'ll be sharing songs from our debut album.',
-    buttonText: 'Tickets',
+    buttonText: 'DETAILS',
     buttonColor: '#10b981'
   },
   {
@@ -151,7 +151,7 @@ export const shows = [
     venue: 'Lagniappe House',
     address: '3425 NE 2nd Ave, Miami, FL 33137',
     description: 'Join us at Lagniappe for a night of live music and good company in one of Miami\'s most intimate spots. We\'ll be performing songs from our debut album.',
-    buttonText: 'Free Entry',
+    buttonText: 'DETAILS',
     buttonColor: '#f97316'
   },
   {
@@ -161,7 +161,7 @@ export const shows = [
     venue: 'Street Stages',
     address: '174 E Flagler St, Miami, FL 33131',
     description: 'Join us at Street Stages for an afternoon of live music in a vibrant, open setting. Ivan will be taking the stage, performing songs from our debut album.',
-    buttonText: 'Details',
+    buttonText: 'DETAILS',
     buttonColor: '#FF3B30'
   }
 ];

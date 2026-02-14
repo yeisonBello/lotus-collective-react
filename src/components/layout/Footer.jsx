@@ -53,44 +53,7 @@ const Footer = () => {
         }}
       />
 
-      {/* Large Lotus Flower Image - Right Side */}
-      <motion.div
-        className="absolute right-0 top-0 bottom-0 w-1/2 flex items-center justify-end overflow-hidden z-0"
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
-        transition={{ duration: 1.5, ease: 'easeOut' }}
-      >
-        <motion.img
-          src="/assets/images/lotus-flower.png"
-          alt=""
-          aria-hidden="true"
-          className="w-full max-w-2xl h-auto object-contain opacity-20 grayscale"
-          style={{ filter: 'contrast(1.1) brightness(0.8)' }}
-          animate={{
-            opacity: [0.15, 0.25, 0.15],
-            scale: [1, 1.02, 1],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-          onError={(e) => {
-            // Fallback if image doesn't exist
-            e.target.style.display = 'none';
-          }}
-        />
-        {/* Fallback lotus graphic */}
-        <div
-          className="absolute right-0 text-[20rem] leading-none font-serif text-white/[0.06] select-none pointer-events-none"
-          style={{
-            fontFamily: 'var(--font-display)',
-            transform: 'translateX(20%)'
-          }}
-        >
-          ✿
-        </div>
-      </motion.div>
+        {/* Removed lotus flower background image and fallback flower graphic */}
 
       {/* Main Content - Two Column Layout */}
       <motion.div
@@ -149,13 +112,8 @@ const Footer = () => {
               <nav>
                 <ul className="space-y-4 text-sm">
                   {[
-                    { label: 'THE STORY', href: '#story' },
-                    { label: 'DISCOGRAPHY', href: '#discography' },
                     { label: 'GALLERY', href: '/gallery' },
-                    { label: 'CAST', href: '#members' },
-                    { label: 'MEMBERS', href: '#members' },
                     { label: 'UPCOMING SHOWS', href: '#shows' },
-                    { label: 'ROI', href: '#roi' },
                     { label: 'EPK', href: '#epk' },
                   ].map((link, index) => (
                     <li key={index}>
@@ -248,9 +206,10 @@ const Footer = () => {
                   </svg>
                 </a>
 
-                {/* Apple Music */}
+
+                {/* Twitch */}
                 <a
-                  href="https://music.apple.com/artist/lotuscollective"
+                  href="https://www.twitch.tv/lotuscollectivemusic"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full border flex items-center justify-center transition-all"
@@ -260,17 +219,47 @@ const Footer = () => {
                     transitionDuration: 'var(--timing-quarter)',
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = 'var(--gold-shimmer)';
-                    e.currentTarget.style.backgroundColor = 'var(--gold-shimmer)';
+                    e.currentTarget.style.borderColor = '#9147ff';
+                    e.currentTarget.style.backgroundColor = '#9147ff';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)';
                     e.currentTarget.style.backgroundColor = 'transparent';
                   }}
-                  aria-label="Apple Music"
+                  aria-label="Twitch"
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>
-                    <path d="M23.997 6.124c0-.738-.065-1.47-.24-2.19-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 0 0-1.877-.726 10.496 10.496 0 0 0-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026-.747.043-1.49.123-2.193.4-1.336.53-2.3 1.452-2.865 2.78-.192.448-.292.925-.363 1.408-.056.392-.088.788-.1 1.18-.005.032-.007.062-.01.093v12.223c.01.14.017.283.027.424.05.815.154 1.624.497 2.373.65 1.42 1.738 2.353 3.234 2.801.42.127.856.187 1.293.228.555.053 1.11.06 1.667.06h11.03a12.5 12.5 0 0 0 1.57-.1c.822-.106 1.596-.35 2.296-.81a5.046 5.046 0 0 0 1.88-2.207c.186-.42.293-.87.354-1.324.053-.39.07-.781.09-1.173.01-.167.01-.333.01-.5V6.124zm-7.41 11.812c0 .274-.028.546-.093.808-.07.285-.188.55-.353.79-.18.26-.406.477-.665.65-.56.378-1.195.523-1.87.523-.426 0-.845-.078-1.237-.24-.415-.17-.787-.416-1.096-.736-.324-.337-.563-.748-.697-1.204-.13-.437-.166-.894-.098-1.344.062-.415.206-.81.422-1.163.223-.364.52-.674.873-.912.41-.276.87-.456 1.354-.523.51-.07 1.03-.044 1.528.083.555.142 1.064.407 1.482.782.398.357.7.807.877 1.314.15.43.227.883.22 1.336v1.13c0 .038.002.075.005.112l.002.022h.002l.002.022v.01zm3.873-9.45c-.01.01-.023.017-.035.024-.01.007-.02.012-.03.017l-5.443 2.987v6.993c0 .003 0 .005-.002.008v.018c-.004.29-.034.58-.09.865-.13.653-.42 1.263-.838 1.776-.408.5-.94.89-1.543 1.14-.633.26-1.316.37-2.002.32-.68-.05-1.35-.22-1.97-.51-.62-.29-1.18-.7-1.64-1.21-.46-.51-.81-1.11-1.03-1.77-.22-.66-.3-1.36-.24-2.05.06-.69.25-1.37.56-1.99.31-.62.74-1.17 1.26-1.62.52-.45 1.13-.79 1.78-1 .65-.21 1.33-.29 2.01-.23.68.06 1.34.23 1.96.51.41.18.8.41 1.15.69V5.968c0-.012.003-.023.006-.034l.002-.006.004-.01.005-.01c.003-.006.006-.012.01-.018l.003-.006.012-.017.006-.009a.14.14 0 0 1 .016-.018l.008-.01a.143.143 0 0 1 .02-.017l.007-.006a.117.117 0 0 1 .023-.015l.01-.005a.116.116 0 0 1 .023-.01h.002a.116.116 0 0 1 .028-.008h.003l.03-.003a.086.086 0 0 1 .027 0h.007c.008 0 .015.002.023.004l5.612-1.023c.062-.01.125.006.175.047.05.04.078.1.078.163v7.812z" />
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" style={{ color: '#fff' }}>
+                    <path d="M4.285 0L1.143 4.285v15.428h5.143V24l4.285-4.286h3.428L22.857 15V0H4.285zm16.285 14.143l-3.428 3.429h-3.857l-3.429 3.428v-3.428H2.286V1.714h18.285v12.429zM16.286 6.857h-1.143v5.143h1.143V6.857zm-4.571 0h-1.143v5.143h1.143V6.857z" />
+                  </svg>
+                </a>
+
+                {/* TikTok */}
+                <a
+                  href="https://www.tiktok.com/@lotuscollectivemusic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-full border flex items-center justify-center transition-all"
+                  style={{
+                    borderColor: 'rgba(255, 255, 255, 0.2)',
+                    backgroundColor: 'transparent',
+                    transitionDuration: 'var(--timing-quarter)',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = '#25F4EE';
+                    e.currentTarget.style.backgroundColor = '#25F4EE';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                  }}
+                  aria-label="TikTok"
+                >
+                  <svg className="w-5 h-5" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path d="M34.5 6c.3 2.7 2.4 9 9 9v6.2c-3.2.3-6.2-1-9-3.1V32c0 7.2-5.8 13-13 13S8 39.2 8 32s5.8-13 13-13h2v6h-2c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7V2h6.5V6z" fill="#000"/>
+                      <path d="M34.5 6c.3 2.7 2.4 9 9 9v6.2c-3.2.3-6.2-1-9-3.1V32c0 7.2-5.8 13-13 13S8 39.2 8 32s5.8-13 13-13h2v6h-2c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7V2h6.5V6z" fill="#25F4EE" fillOpacity=".7"/>
+                      <path d="M34.5 6c.3 2.7 2.4 9 9 9v6.2c-3.2.3-6.2-1-9-3.1V32c0 7.2-5.8 13-13 13S8 39.2 8 32s5.8-13 13-13h2v6h-2c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7V2h6.5V6z" fill="#FE2C55" fillOpacity=".4"/>
+                    </g>
                   </svg>
                 </a>
 
@@ -356,26 +345,16 @@ const Footer = () => {
           <p
             className="text-xs"
             style={{
-              color: 'rgba(255, 255, 255, 0.3)',
+              color: 'rgba(255, 255, 255, 0.4)',
               letterSpacing: '0.1em'
             }}
           >
-            © //
-          </p>
-
-          <p
-            className="text-xs"
-            style={{
-              color: 'rgba(255, 255, 255, 0.3)',
-              letterSpacing: '0.1em'
-            }}
-          >
-            © 2026 Lotus
+            © 2026 Lotus Collective. All rights reserved.
           </p>
 
           <div className="flex gap-6 text-xs">
             <a
-              href="#privacy"
+              href="/privacy"
               className="transition-colors"
               style={{
                 color: 'rgba(255, 255, 255, 0.3)',
@@ -388,7 +367,7 @@ const Footer = () => {
               PRIVACY POLICY
             </a>
             <a
-              href="#terms"
+              href="/terms"
               className="transition-colors"
               style={{
                 color: 'rgba(255, 255, 255, 0.3)',

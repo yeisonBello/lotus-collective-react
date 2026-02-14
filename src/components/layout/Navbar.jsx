@@ -16,16 +16,16 @@ const Navbar = () => {
 
       <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
         <a
-          href="#experience"
+          href="/#band-story"
           className="transition-colors"
           style={{ transitionDuration: 'var(--timing-quarter)' }}
           onMouseEnter={(e) => e.target.style.color = 'var(--brass-bright)'}
           onMouseLeave={(e) => e.target.style.color = 'white'}
         >
-          The Story
+          The Journey
         </a>
         <a
-          href="#music"
+          href="/#music"
           className="transition-colors"
           style={{ transitionDuration: 'var(--timing-quarter)' }}
           onMouseEnter={(e) => e.target.style.color = 'var(--brass-bright)'}
@@ -34,7 +34,7 @@ const Navbar = () => {
           Discography
         </a>
         <a
-          href="#collective"
+          href="/#collective"
           className="transition-colors"
           style={{ transitionDuration: 'var(--timing-quarter)' }}
           onMouseEnter={(e) => e.target.style.color = 'var(--brass-bright)'}
@@ -52,7 +52,7 @@ const Navbar = () => {
           Gallery
         </Link>
         <a
-          href="#shows"
+          href="/#shows"
           className="transition-colors"
           style={{ transitionDuration: 'var(--timing-quarter)' }}
           onMouseEnter={(e) => e.target.style.color = 'var(--brass-bright)'}
