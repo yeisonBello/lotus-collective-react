@@ -3,10 +3,10 @@ const members = [
     name: 'Ivan Lotus',
     role: 'Frontman / Keys',
     color: '#FF3B30',
-    image: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?q=80&w=800&auto=format&fit=crop',
-    spiritAnimal: 'https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?q=80&w=800&auto=format&fit=crop',
+    image: '/assets/profile_photo/ivan.webp',
+    spiritAnimal: '/assets/profile_photo/leon.png',
     social: {
-      instagram: '#',
+    instagram: 'https://www.instagram.com/ivanlotus_/',
       facebook: '#',
       email: 'mailto:ivan@lotuscollective.com'
     }
@@ -15,10 +15,10 @@ const members = [
     name: 'Samuel Little',
     role: 'Frontman / Bass',
     color: '#10b981',
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop',
-    spiritAnimal: 'https://images.unsplash.com/photo-1588167056840-13caf6e4562a?q=80&w=800&auto=format&fit=crop',
+    image: '/assets/profile_photo/sam.webp',
+    spiritAnimal: '/assets/profile_photo/panther.png',
     social: {
-      instagram: '#',
+    instagram: 'https://www.instagram.com/samiheadd/?hl=en',
       facebook: '#',
       email: 'mailto:sam@lotuscollective.com'
     }
@@ -27,10 +27,10 @@ const members = [
     name: 'Julian Bermudez',
     role: 'Drums / Jazz Prodigy',
     color: '#6366f1',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop',
-    spiritAnimal: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg',
+    image: '/assets/profile_photo/julian.webp',
+    spiritAnimal: '/assets/profile_photo/turtle.png',
     social: {
-      instagram: '#',
+    instagram: 'https://www.instagram.com/bad_juju_bad/?hl=en',
       facebook: '#',
       email: 'mailto:julian@lotuscollective.com'
     }
@@ -39,10 +39,10 @@ const members = [
     name: 'Marcelo Romero',
     role: 'Guitar / Jazz Prodigy',
     color: '#14b8a6',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop',
-    spiritAnimal: 'https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?q=80&w=800&auto=format&fit=crop',
+    image: '/assets/profile_photo/marcelo.webp',
+    spiritAnimal: '/assets/profile_photo/Polecat.png',
     social: {
-      instagram: '#',
+    instagram: 'https://www.instagram.com/mromero_/?hl=en',
       facebook: '#',
       email: 'mailto:marcelo@lotuscollective.com'
     }
@@ -51,10 +51,10 @@ const members = [
     name: 'Marvin Clairsaint',
     role: 'Virtuoso Drummer',
     color: '#f97316',
-    image: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/c543a9e1-f226-4ced-80b0-feb8445a75b9_1600w.jpg',
-    spiritAnimal: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/5bab247f-35d9-400d-a82b-fd87cfe913d2_1600w.webp',
+    image: '/assets/profile_photo/marvin.webp',
+    spiritAnimal: '/assets/profile_photo/bear.png',
     social: {
-      instagram: '#',
+    instagram: 'https://www.instagram.com/muzix_martian/?hl=en',
       facebook: '#',
       email: 'mailto:marvin@lotuscollective.com'
     }

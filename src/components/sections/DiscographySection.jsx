@@ -11,59 +11,52 @@ const DiscographySection = () => {
           <div>
             <h2 className="font-serif-display text-5xl md:text-7xl">Discography</h2>
             <p className="text-zinc-500 mt-2 text-sm uppercase tracking-wider">
-              Meet the singles of "Where is Edgar?"
+              Featured singles from "Where is Edgar?"
             </p>
           </div>
         </div>
 
-        {/* Track List */}
+        {/* Spotify Embeds */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {featuredTracks.map((track) => (
-            <div
-              key={track.id}
-              className="group relative bg-zinc-900/50 p-6 rounded-sm border border-white/5 hover:border-[#FF3B30]/50 transition-colors duration-500"
-            >
-              <div className="flex justify-between items-start mb-8">
+            <div key={track.id} className="flex flex-col h-full">
+              {/* Track Info */}
+              <div className="mb-4">
                 <span className="font-mono text-xs" style={{ color: track.color }}>
                   {track.id}
                 </span>
-                <svg
-                  className="w-6 h-6 text-zinc-600 group-hover:text-white transition-colors"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
-                  />
-                </svg>
+                <h3 className="font-serif-display text-2xl mt-2">{track.title}</h3>
+                <p className="text-zinc-500 text-xs mt-2 uppercase tracking-wider">
+                  {track.genre} • {track.duration}
+                </p>
               </div>
-              <h3 className="font-serif-display text-4xl mb-2">{track.title}</h3>
-              <p className="text-zinc-500 text-sm mb-6 line-clamp-3">{track.description}</p>
 
-              {/* Audio Player UI (Visual) */}
-              <div className="flex items-center gap-4 mt-auto">
-                <button className="w-12 h-12 flex items-center justify-center rounded-full bg-white text-black hover:bg-[#FF3B30] hover:text-white transition-colors">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </button>
-                <div className="flex-1 h-1 bg-zinc-800 rounded-full overflow-hidden">
-                  <div
-                    className="w-1/3 h-full bg-zinc-500 group-hover:bg-[#FF3B30] transition-colors"
-                    style={{ width: track.id === '01' ? '33%' : '0%' }}
-                  ></div>
+              {/* Spotify Embed */}
+              {track.spotifyUrl && !track.spotifyUrl.includes('YOUR_TRACK_ID_HERE') ? (
+                <iframe
+                  data-testid="embed-iframe"
+                  style={{ borderRadius: '12px' }}
+                  src={track.spotifyUrl}
+                  width="100%"
+                  height="352"
+                  frameBorder="0"
+                  allowFullScreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="w-full h-80 bg-zinc-900/50 border border-white/10 rounded-lg flex items-center justify-center">
+                  <p className="text-zinc-500 text-center text-sm">
+                    Spotify embed coming soon
+                  </p>
                 </div>
-              </div>
+              )}
             </div>
           ))}
         </div>
 
         {/* View All Link */}
-        <div className="mt-12 text-center">
+        <div className="mt-16 text-center">
           <a
             href="/discography"
             className="inline-flex items-center gap-2 text-[#FF3B30] hover:text-white transition-colors uppercase text-sm font-bold tracking-widest border-b border-[#FF3B30] pb-1"

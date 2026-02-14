@@ -48,7 +48,8 @@ export const tracks = [
     color: '#FF3B30',
     genre: 'Jazz Fusion, Latin Soul',
     duration: '4:32',
-    key: 'D Minor'
+    key: 'D Minor',
+    spotifyUrl: 'https://open.spotify.com/embed/track/0TRzQCbaPzotUPiu1po7hr'
   },
   {
     id: '02',
@@ -57,7 +58,8 @@ export const tracks = [
     color: '#f97316',
     genre: 'Tropical Funk, Jazz',
     duration: '5:15',
-    key: 'E Major'
+    key: 'E Major',
+    spotifyUrl: 'https://open.spotify.com/embed/track/6NSw3Uep0oq9iMUWD7AkrT'
   },
   {
     id: '03',
@@ -66,7 +68,8 @@ export const tracks = [
     color: '#10b981',
     genre: 'Funk, Jazz Fusion',
     duration: '6:47',
-    key: 'A Minor'
+    key: 'A Minor',
+    spotifyUrl: 'https://open.spotify.com/embed/track/4EsoWsCkmi2zKHCP9STsog'
   },
   {
     id: '04',
@@ -75,7 +78,8 @@ export const tracks = [
     color: '#8b5cf6',
     genre: 'Latin Soul, Funk',
     duration: '5:23',
-    key: 'F Minor'
+    key: 'F Minor',
+    spotifyUrl: 'https://open.spotify.com/track/YOUR_TRACK_ID_HERE'
   },
   {
     id: '05',
@@ -84,7 +88,8 @@ export const tracks = [
     color: '#eab308',
     genre: 'Latin Jazz',
     duration: '4:58',
-    key: 'G Major'
+    key: 'G Major',
+    spotifyUrl: 'https://open.spotify.com/track/YOUR_TRACK_ID_HERE'
   },
   {
     id: '06',
@@ -93,7 +98,8 @@ export const tracks = [
     color: '#06b6d4',
     genre: 'Jazz, Disco Funk',
     duration: '5:41',
-    key: 'B♭ Major'
+    key: 'B♭ Major',
+    spotifyUrl: 'https://open.spotify.com/track/YOUR_TRACK_ID_HERE'
   },
   {
     id: '07',
@@ -102,7 +108,8 @@ export const tracks = [
     color: '#dc2626',
     genre: 'Latin Fusion',
     duration: '4:19',
-    key: 'C Minor'
+    key: 'C Minor',
+    spotifyUrl: 'https://open.spotify.com/track/YOUR_TRACK_ID_HERE'
   }
 ];
 
