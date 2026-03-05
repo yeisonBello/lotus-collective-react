@@ -8,6 +8,7 @@ import EdgarExperience from './pages/EdgarExperience';
 import Discography from './pages/Discography';
 import News from './pages/News';
 import Gallery from './pages/Gallery';
+import Contact from './pages/Contact';
 import FloatingAudioControl from './pages/FloatingAudioControl';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/discography" element={<Discography />} />
           <Route path="/news" element={<News />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/book" element={<Contact />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
         </Routes>

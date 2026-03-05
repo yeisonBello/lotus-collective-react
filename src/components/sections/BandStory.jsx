@@ -232,7 +232,7 @@ const StoryChapter = ({ chapter, index, total }) => {
       aria-label={`Story chapter ${index + 1} of ${total}`}
     >
       {/* Chapter Content - Grid with Timeline Column */}
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 md:gap-12 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 md:gap-12 items-center pl-14 md:pl-0">
         {/* Image */}
         <div className={chapter.alignment === 'right' ? 'md:order-3' : 'md:order-1'}>
           <ChapterImage
@@ -249,7 +249,7 @@ const StoryChapter = ({ chapter, index, total }) => {
         </div>
 
         {/* Mobile Marker (positioned at left edge) */}
-        <div className="md:hidden absolute left-6 top-0">
+        <div className="md:hidden absolute left-6 top-0 -translate-x-1/2">
           <ChapterMarker number={chapter.id} color={chapter.color} isInView={isInView} />
         </div>
 
@@ -312,7 +312,7 @@ const BandStory = ({ chapters = storyChapters, showTimeline = true, compactMode 
           {/* Mobile Timeline (Left Edge) */}
           {showTimeline && (
             <div
-              className="absolute left-6 top-0 bottom-0 w-0.5 md:hidden"
+              className="absolute left-6 top-0 bottom-0 w-0.5 md:hidden -translate-x-1/2"
               style={{
                 background: 'linear-gradient(180deg, #D4AF37 0%, #FFD700 50%, #D4AF37 100%)',
                 opacity: 0.3

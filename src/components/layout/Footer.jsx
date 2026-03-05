@@ -53,7 +53,7 @@ const Footer = () => {
         }}
       />
 
-        {/* Removed lotus flower background image and fallback flower graphic */}
+      {/* Removed lotus flower background image and fallback flower graphic */}
 
       {/* Main Content - Two Column Layout */}
       <motion.div
@@ -93,6 +93,35 @@ const Footer = () => {
             >
               "Tropical Impressionism from the heart of Miami."
             </p>
+
+            <motion.div
+              variants={itemVariants}
+              className="mt-8"
+            >
+              <a
+                href="/book"
+                className="inline-block px-8 py-3 border transition-all duration-300"
+                style={{
+                  borderColor: 'var(--brass-bright)',
+                  color: 'var(--brass-bright)',
+                  fontFamily: 'var(--font-body)',
+                  letterSpacing: '0.1em',
+                  fontSize: '0.75rem',
+                  fontWeight: 600,
+                  backgroundColor: 'transparent'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = 'var(--brass-bright)';
+                  e.target.style.color = '#000';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = 'transparent';
+                  e.target.style.color = 'var(--brass-bright)';
+                }}
+              >
+                BOOK LOTUS
+              </a>
+            </motion.div>
           </motion.div>
 
           {/* Right Column - Navigation & Social */}
@@ -115,6 +144,7 @@ const Footer = () => {
                     { label: 'GALLERY', href: '/gallery' },
                     { label: 'UPCOMING SHOWS', href: '#shows' },
                     { label: 'EPK', href: '#epk' },
+                    { label: 'CONTACT US', href: '/book' },
                   ].map((link, index) => (
                     <li key={index}>
                       <a
@@ -256,9 +286,9 @@ const Footer = () => {
                 >
                   <svg className="w-5 h-5" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g>
-                      <path d="M34.5 6c.3 2.7 2.4 9 9 9v6.2c-3.2.3-6.2-1-9-3.1V32c0 7.2-5.8 13-13 13S8 39.2 8 32s5.8-13 13-13h2v6h-2c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7V2h6.5V6z" fill="#000"/>
-                      <path d="M34.5 6c.3 2.7 2.4 9 9 9v6.2c-3.2.3-6.2-1-9-3.1V32c0 7.2-5.8 13-13 13S8 39.2 8 32s5.8-13 13-13h2v6h-2c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7V2h6.5V6z" fill="#25F4EE" fillOpacity=".7"/>
-                      <path d="M34.5 6c.3 2.7 2.4 9 9 9v6.2c-3.2.3-6.2-1-9-3.1V32c0 7.2-5.8 13-13 13S8 39.2 8 32s5.8-13 13-13h2v6h-2c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7V2h6.5V6z" fill="#FE2C55" fillOpacity=".4"/>
+                      <path d="M34.5 6c.3 2.7 2.4 9 9 9v6.2c-3.2.3-6.2-1-9-3.1V32c0 7.2-5.8 13-13 13S8 39.2 8 32s5.8-13 13-13h2v6h-2c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7V2h6.5V6z" fill="#000" />
+                      <path d="M34.5 6c.3 2.7 2.4 9 9 9v6.2c-3.2.3-6.2-1-9-3.1V32c0 7.2-5.8 13-13 13S8 39.2 8 32s5.8-13 13-13h2v6h-2c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7V2h6.5V6z" fill="#25F4EE" fillOpacity=".7" />
+                      <path d="M34.5 6c.3 2.7 2.4 9 9 9v6.2c-3.2.3-6.2-1-9-3.1V32c0 7.2-5.8 13-13 13S8 39.2 8 32s5.8-13 13-13h2v6h-2c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7V2h6.5V6z" fill="#FE2C55" fillOpacity=".4" />
                     </g>
                   </svg>
                 </a>
@@ -391,8 +421,8 @@ const Footer = () => {
             Florida
           </p>
         </div>
-      </motion.div>
-    </footer>
+      </motion.div >
+    </footer >
   );
 };
 
