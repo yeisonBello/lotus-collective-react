@@ -37,7 +37,7 @@ const Hero = () => {
 
   return (
     <div className="relative w-full h-screen bg-black overflow-hidden font-sans">
-      
+
       {/* 1. Loading Screen (Narrative intro) */}
       <AnimatePresence>
         {!isVideoLoaded && (
@@ -61,11 +61,11 @@ const Hero = () => {
       </AnimatePresence>
 
       {/* 2. Main Hero Content (Fades in after video is ready) */}
-      <motion.header 
+      <motion.header
         style={{ opacity: isVideoLoaded ? 1 : 0 }}
         className="relative w-full h-screen flex flex-col justify-center items-center text-white"
       >
-        
+
         {/* Background Video Layer (Z-0) - Using MP4 format */}
         <motion.div style={{ y: yParallax, opacity: opacityFade }} className="absolute inset-0 z-0">
           <video
@@ -104,10 +104,25 @@ const Hero = () => {
             Produced by Cheo Pardo
           </motion.p>
 
-          <h1 className="font-serif text-7xl md:text-9xl lg:text-[11rem] leading-[0.85] tracking-tighter mb-12 drop-shadow-2xl brass-shimmer">
-            Lotus <br />
-            <span className="italic font-extralight" style={{ color: 'var(--gold-shimmer)' }}>Collective</span>
-          </h1>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            role="img"
+            aria-label="Lotus Collective Logo"
+            className="w-[80%] max-w-4xl h-48 md:h-64 lg:h-80 mb-12 drop-shadow-[0_0_30px_rgba(212,175,55,0.3)]"
+            style={{
+              backgroundColor: 'var(--brass-bright)',
+              maskImage: 'url(/assets/background/logo.webp)',
+              maskSize: 'contain',
+              maskRepeat: 'no-repeat',
+              maskPosition: 'center',
+              WebkitMaskImage: 'url(/assets/background/logo.webp)',
+              WebkitMaskSize: 'contain',
+              WebkitMaskRepeat: 'no-repeat',
+              WebkitMaskPosition: 'center'
+            }}
+          />
 
           {/* Featured Red Square Motif with Neon Glow */}
           <div className="relative group cursor-pointer mt-4">

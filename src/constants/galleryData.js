@@ -30,4 +30,7 @@ export const lotusImages = {
 
   // 7. Venue Section
   venue: getImagesByFolder('archive'),
+
+  // 8. Visual Moments (Home)
+  visualMoments: getImagesByFolder('visual-moments'),
 };

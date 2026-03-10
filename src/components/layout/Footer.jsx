@@ -69,17 +69,22 @@ const Footer = () => {
             variants={itemVariants}
             className="flex flex-col justify-center"
           >
-            <h2
-              className="font-serif text-6xl md:text-7xl mb-6 tracking-tight"
+            <div
+              role="img"
+              aria-label="Lotus Collective Logo"
+              className="h-20 w-48 mb-8"
               style={{
-                color: '#f5f5f5',
-                fontFamily: 'var(--font-display)',
-                fontWeight: 300,
-                letterSpacing: '0.02em'
+                backgroundColor: 'var(--brass-bright)',
+                maskImage: 'url(/assets/background/logo.webp)',
+                maskSize: 'contain',
+                maskRepeat: 'no-repeat',
+                maskPosition: 'left center',
+                WebkitMaskImage: 'url(/assets/background/logo.webp)',
+                WebkitMaskSize: 'contain',
+                WebkitMaskRepeat: 'no-repeat',
+                WebkitMaskPosition: 'left center'
               }}
-            >
-              LOTUSCOL
-            </h2>
+            />
 
             <p
               className="font-serif italic text-base md:text-lg"

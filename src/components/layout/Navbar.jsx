@@ -14,14 +14,26 @@ const Navbar = () => {
     >
       <Link
         to="/"
-        className="text-2xl font-serif-display tracking-tighter uppercase z-50 transition-colors hover-glow"
-        style={{
-          color: 'var(--brass-bright)',
-          transitionDuration: 'var(--timing-quarter)'
-        }}
+        className="z-50 transition-transform hover:scale-105 duration-300"
         onClick={closeMenu}
       >
-        Lotus<span className="italic" style={{ color: 'var(--neon-coral)' }}>Col.</span>
+        <div
+          role="img"
+          aria-label="Lotus Collective Logo"
+          className="h-12 w-32"
+          style={{
+            backgroundColor: isMenuOpen ? 'white' : 'var(--brass-bright)',
+            maskImage: 'url(/assets/background/logo.webp)',
+            maskSize: 'contain',
+            maskRepeat: 'no-repeat',
+            maskPosition: 'left center',
+            WebkitMaskImage: 'url(/assets/background/logo.webp)',
+            WebkitMaskSize: 'contain',
+            WebkitMaskRepeat: 'no-repeat',
+            WebkitMaskPosition: 'left center',
+            transition: 'background-color 0.3s'
+          }}
+        />
       </Link>
 
       {/* Desktop Menu */}

@@ -1,19 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { lotusImages } from '../../constants/galleryData.js';
 
 const VisualMoments = ({ data }) => {
   const sectionTitle = data?.gallery?.title || "Visual moments";
   const sectionDesc = data?.gallery?.description || "Scenes from Miami nights and the stages where Lotus Collective comes alive";
-  
-  // Array of image paths
-  const galleryImages = [
-    '/assets/lotus_gallery/image-019.jpg',
-    '/assets/lotus_gallery/image-024.jpg',
-    '/assets/lotus_gallery/image-043.jpg',
-    '/assets/lotus_gallery/image-062.jpg',
-    '/assets/lotus_gallery/image-082.jpg',
-    '/assets/lotus_gallery/image-120.jpg'
-  ];
+
+  // Array of image paths - Dynamically loaded
+  const galleryImages = lotusImages.visualMoments;
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -34,7 +28,7 @@ const VisualMoments = ({ data }) => {
       <img src="/assets/palm-right.png" alt="" className="absolute -right-20 top-1/2 -translate-y-1/2 w-[500px] opacity-10 pointer-events-none blur-sm -rotate-12" />
 
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center relative z-10">
-        
+
         {/* Lado del Texto */}
         <div className="md:w-1/3 mb-10 md:mb-0 pr-10 text-center">
           <h2 className="text-5xl font-bold text-white mb-6 leading-tight">
@@ -58,7 +52,7 @@ const VisualMoments = ({ data }) => {
               ) : (
                 <div className="text-zinc-700">
                   <svg className="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c0 1.1.9 2-2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                    <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c0 1.1.9 2-2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
                   </svg>
                 </div>
               )}
@@ -66,13 +60,13 @@ const VisualMoments = ({ data }) => {
               {/* Botones de Navegación (Flechas) */}
               <button onClick={handlePrev} className="absolute left-6 top-1/2 -translate-y-1/2 bg-black/50 p-3 rounded-full shadow-lg text-white hover:bg-[#FF3B30] transition-all backdrop-blur-sm border border-white/10">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
-              
+
               <button onClick={handleNext} className="absolute right-6 top-1/2 -translate-y-1/2 bg-black/50 p-3 rounded-full shadow-lg text-white hover:bg-[#FF3B30] transition-all backdrop-blur-sm border border-white/10">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                 </svg>
               </button>
             </div>
@@ -80,8 +74,8 @@ const VisualMoments = ({ data }) => {
             {/* Indicadores (Puntos) en la esquina inferior derecha */}
             <div className="absolute -bottom-10 right-0 flex space-x-2">
               {galleryImages.map((_, i) => (
-                <span 
-                  key={i} 
+                <span
+                  key={i}
                   className={`h-2 w-2 rounded-full transition-colors ${i === currentIndex ? 'bg-[#FF3B30]' : 'bg-zinc-700'}`}
                 />
               ))}
