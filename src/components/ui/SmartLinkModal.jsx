@@ -2,7 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Music, Play, Youtube, ExternalLink } from 'lucide-react';
 
-const SmartLinkModal = ({ isOpen, onClose, albumTitle, cover }) => {
+const SmartLinkModal = ({ isOpen, onClose, albumTitle, cover, spotifyUrl, soundcloudUrl, youtubeUrl }) => {
     if (!isOpen) return null;
 
     return (
@@ -50,8 +50,9 @@ const SmartLinkModal = ({ isOpen, onClose, albumTitle, cover }) => {
                     <div className="p-8 space-y-4">
                         {/* Spotify */}
                         <a
-                            href="#"
+                            href={spotifyUrl || '#'}
                             target="_blank"
+                            rel="noopener noreferrer"
                             className="flex items-center justify-between p-4 bg-white/5 hover:bg-[#1DB954] group transition-all duration-300 border border-white/5"
                         >
                             <div className="flex items-center gap-4">
@@ -63,8 +64,9 @@ const SmartLinkModal = ({ isOpen, onClose, albumTitle, cover }) => {
 
                         {/* SoundCloud */}
                         <a
-                            href="#"
+                            href={soundcloudUrl || '#'}
                             target="_blank"
+                            rel="noopener noreferrer"
                             className="flex items-center justify-between p-4 bg-white/5 hover:bg-[#FF5500] group transition-all duration-300 border border-white/5"
                         >
                             <div className="flex items-center gap-4">
@@ -76,8 +78,9 @@ const SmartLinkModal = ({ isOpen, onClose, albumTitle, cover }) => {
 
                         {/* YouTube */}
                         <a
-                            href="#"
+                            href={youtubeUrl || '#'}
                             target="_blank"
+                            rel="noopener noreferrer"
                             className="flex items-center justify-between p-4 bg-white/5 hover:bg-[#FF0000] group transition-all duration-300 border border-white/5"
                         >
                             <div className="flex items-center gap-4">

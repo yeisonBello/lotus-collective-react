@@ -18,9 +18,9 @@ const Discography = () => {
       type: 'Debut Album',
       year: '2025',
       cover: '/assets/covers/south-pointe.png',
-      spotifyUrl: 'https://open.spotify.com/album/YOUR_ALBUM_ID_HERE',
-      soundcloudUrl: '#',
-      youtubeUrl: '#'
+      spotifyUrl: 'https://open.spotify.com/album/7lDNcPipBYcfxFXwKYjqy5',
+      soundcloudUrl: 'https://soundcloud.com/lotuscollective/sets/where-is-edgar-1',
+      youtubeUrl: 'https://www.youtube.com/playlist?list=OLAK5uy_kk_y6hxv_1I_70TB0RH95rxljPKO8rjk8'
     },
     {
       id: 'paraiso',
@@ -28,9 +28,9 @@ const Discography = () => {
       type: 'Single',
       year: '2025',
       cover: '/assets/covers/paraiso.png',
-      spotifyUrl: '#',
-      soundcloudUrl: '#',
-      youtubeUrl: '#'
+      spotifyUrl: 'https://open.spotify.com/album/2mBwlYV1SgJABIHXs29ObF',
+      soundcloudUrl: 'https://soundcloud.com/lotuscollective/paraiso?in=lotuscollective/sets/where-is-edgar-1',
+      youtubeUrl: 'https://www.youtube.com/watch?v=rAYSxrSKOrQ&list=OLAK5uy_kk_y6hxv_1I_70TB0RH95rxljPKO8rjk8&index=5'
     },
     {
       id: 'caliente',
@@ -38,9 +38,9 @@ const Discography = () => {
       type: 'Single',
       year: '2025',
       cover: '/assets/covers/caliente.png',
-      spotifyUrl: '#',
-      soundcloudUrl: '#',
-      youtubeUrl: '#'
+      spotifyUrl: 'https://open.spotify.com/track/6NSw3Uep0oq9iMUWD7AkrT',
+      soundcloudUrl: 'https://soundcloud.com/lotuscollective/caliente?in=lotuscollective/sets/paraiso-902906447',
+      youtubeUrl: 'https://www.youtube.com/watch?v=i4LsD6uui3E&list=OLAK5uy_kk_y6hxv_1I_70TB0RH95rxljPKO8rjk8&index=4'
     }
   ];
 
@@ -138,6 +138,9 @@ const Discography = () => {
           onClose={() => setModalOpen(false)}
           albumTitle={selectedAlbum.title}
           cover={selectedAlbum.cover}
+          spotifyUrl={selectedAlbum.spotifyUrl}
+          soundcloudUrl={selectedAlbum.soundcloudUrl}
+          youtubeUrl={selectedAlbum.youtubeUrl}
         />
       )}
     </div>
