@@ -24,8 +24,8 @@ const members = [
     }
   },
   {
-    name: 'Julian Bermudez',
-    role: 'Drums / Jazz Prodigy',
+    name: 'Julián Bermudez',
+    role: 'Keyboard',
     color: '#6366f1',
     image: '/assets/profile_photo/julian.webp',
     spiritAnimal: '/assets/profile_photo/turtle.png',
@@ -37,7 +37,7 @@ const members = [
   },
   {
     name: 'Marcelo Romero',
-    role: 'Guitar / Jazz Prodigy',
+    role: 'Saxofone',
     color: '#14b8a6',
     image: '/assets/profile_photo/marcelo.webp',
     spiritAnimal: '/assets/profile_photo/Polecat.png',
@@ -49,7 +49,7 @@ const members = [
   },
   {
     name: 'Marvin Clairsaint',
-    role: 'Virtuoso Drummer',
+    role: 'Drums',
     color: '#f97316',
     image: '/assets/profile_photo/marvin.webp',
     spiritAnimal: '/assets/profile_photo/bear.png',

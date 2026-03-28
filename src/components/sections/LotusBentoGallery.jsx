@@ -129,11 +129,11 @@ const LotusBentoGallery = () => {
           />
 
           {/* 3. STATS (Static, no lightbox needed unless desired, but user didn't ask) */}
-          <div className="flex items-center justify-center rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-xl text-center p-6 hover:bg-white/10 transition-colors">
-            <p className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
-              2025:<br />+50 SHOWS.<br />1 ALBUM.
+          <a href="/book" className="flex items-center justify-center rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-xl text-center p-6 hover:bg-white/10 transition-all duration-300 group cursor-pointer shadow-lg">
+            <p className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400 uppercase tracking-widest group-hover:scale-105 transition-transform duration-300">
+              book lotus
             </p>
-          </div>
+          </a>
 
           {/* 4. ENERGY */}
           <BentoItem
@@ -145,13 +145,13 @@ const LotusBentoGallery = () => {
 
           {/* 5. CTA LINK */}
           <a
-            href="#tickets"
+            href="/#shows"
             className="flex flex-col items-center justify-center rounded-[2.5rem] bg-gradient-to-br from-indigo-600 to-purple-700 p-6 text-center hover:brightness-110 transition-all active:scale-95 shadow-lg group"
           >
-            <span className="text-[10px] font-black uppercase tracking-[0.2em] mb-1 opacity-80">Next Appearance</span>
-            <p className="text-sm font-bold text-white">FEB 15 - Lagniappe</p>
+            <span className="text-[10px] font-black uppercase tracking-[0.2em] mb-1 opacity-80">Check</span>
+            <p className="text-base font-bold text-white uppercase tracking-wider">Upcoming Shows</p>
             <div className="mt-4 px-6 py-2 bg-white text-black rounded-full text-xs font-black uppercase group-hover:bg-gray-200 transition-colors">
-              Get Tickets
+              View Shows
             </div>
           </a>
 

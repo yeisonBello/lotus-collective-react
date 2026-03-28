@@ -10,6 +10,7 @@ import News from './pages/News';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import FloatingAudioControl from './pages/FloatingAudioControl';
+import FloatingEPKControl from './pages/FloatingEPKControl';
 
 function App() {
   return (
@@ -36,8 +37,9 @@ function App() {
         {/* Footer */}
         <Footer />
 
-        {/* Floating Audio Control */}
+        {/* Floating Controls */}
         <FloatingAudioControl />
+        <FloatingEPKControl />
       </div>
     </Router>
   );

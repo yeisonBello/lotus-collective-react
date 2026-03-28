@@ -27,7 +27,7 @@ const Hero = () => {
   // Lotus Collective cover mosaic - Updated with your verified filenames
   const covers = [
     { src: "/assets/covers/caliente.png", pos: "top-[8%] left-[12%]", rot: "rotate-2", size: "w-32 md:w-48", d: 0, dur: 4 },
-    { src: "/assets/covers/dream-walker.png", pos: "top-[15%] right-[10%]", rot: "-rotate-6", size: "w-36 md:w-56", d: 1, dur: 6 },
+    { src: "/assets/covers/dream-walker.webp", pos: "top-[15%] right-[10%]", rot: "-rotate-6", size: "w-36 md:w-56", d: 1, dur: 6 },
     { src: "/assets/covers/paraiso.png", pos: "bottom-[20%] right-[8%]", rot: "rotate-3", size: "w-40 md:w-64", d: 0.5, dur: 5 },
     { src: "/assets/covers/saturday.png", pos: "top-[45%] right-[2%]", rot: "rotate-12", size: "w-32 md:w-44", d: 1.5, dur: 4.5 },
     { src: "/assets/covers/mangoman.png", pos: "bottom-[35%] left-[4%]", rot: "-rotate-3", size: "w-28 md:w-40", d: 2, dur: 5.5 },
@@ -95,14 +95,6 @@ const Hero = () => {
 
         {/* Central Narrative & Identity (Z-30) */}
         <div className="relative z-30 flex flex-col items-center text-center px-6">
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="type-label mb-10"
-            style={{ color: 'var(--brass-bright)' }}
-          >
-            Produced by Cheo Pardo
-          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -129,7 +121,7 @@ const Hero = () => {
             <div className="absolute -inset-4 bg-[var(--neon-coral)] rotate-3 group-hover:rotate-6 transition-transform neon-glow-coral" style={{ transitionDuration: 'var(--timing-whole)' }}></div>
             <div className="relative z-10 w-52 h-52 md:w-72 md:h-72 bg-zinc-900 overflow-hidden shadow-2xl rotate-[-2deg]">
               <img
-                src="/assets/covers/dream-walker.png"
+                src="/assets/covers/dream-walker.webp"
                 alt="Where is Edgar Featured Art"
                 className="w-full h-full object-cover opacity-95 group-hover:scale-110 transition-transform"
                 style={{ transitionDuration: 'var(--timing-double)' }}
