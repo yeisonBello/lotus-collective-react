@@ -35,6 +35,17 @@ const Footer = () => {
     },
   };
 
+  const handleDownload = (e) => {
+    e.preventDefault();
+    const pdfUrl = '/assets/EPK_Lotus_Collective.pdf';
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'Lotus_Collective_EPK.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <footer
       ref={ref}
@@ -154,6 +165,7 @@ const Footer = () => {
                     <li key={index}>
                       <a
                         href={link.href}
+                        onClick={link.label === 'EPK' ? handleDownload : undefined}
                         className="transition-all inline-block"
                         style={{
                           color: 'rgba(255, 255, 255, 0.4)',

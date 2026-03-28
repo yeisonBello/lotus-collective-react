@@ -9,6 +9,8 @@ const Contact = () => {
         message: ''
     });
 
+    const [status, setStatus] = useState('');
+
     const handleChange = (e) => {
         setFormState({
             ...formState,
@@ -16,12 +18,44 @@ const Contact = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // In a real app, this would send data to a backend or service
-        console.log('Form submitted:', formState);
-        alert('Thank you for your inquiry! We will get back to you soon.');
-        setFormState({ name: '', email: '', subject: '', message: '' });
+        setStatus('sending');
+
+        try {
+            // IMPORTANTE: Reemplaza 'YOUR_FORM_ID_AQUI' con el código de tu formulario en Formspree
+            const response = await fetch('https://formspree.io/f/YOUR_FORM_ID_AQUI', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formState)
+            });
+
+            if (response.ok) {
+                setStatus('success');
+                setFormState({ name: '', email: '', subject: '', message: '' });
+                alert('¡Gracias por tu mensaje! Nos pondremos en contacto pronto.');
+            } else {
+                setStatus('error');
+                alert('Hubo un problema al enviar el formulario. Intenta de nuevo.');
+            }
+        } catch (error) {
+            setStatus('error');
+            alert('Hubo un problema de conexión al enviar el formulario.');
+            console.error(error);
+        }
+    };
+
+    const handleDownload = () => {
+        const pdfUrl = '/assets/EPK_Lotus_Collective.pdf';
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.download = 'Lotus_Collective_EPK.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     };
 
     return (
@@ -90,7 +124,7 @@ const Contact = () => {
                             <p className="text-sm text-[var(--gray-500)] mb-4" style={{ fontFamily: 'var(--font-body)' }}>
                                 Download our EPK for high-res photos, bio, and technical rider.
                             </p>
-                            <button className="text-xs uppercase tracking-widest border-b border-[var(--neon-coral)] pb-1 text-[var(--gray-200)] hover:text-[var(--neon-coral)] transition-colors font-bold">
+                            <button onClick={handleDownload} className="text-xs uppercase tracking-widest border-b border-[var(--neon-coral)] pb-1 text-[var(--gray-200)] hover:text-[var(--neon-coral)] transition-colors font-bold">
                                 Download EPK
                             </button>
                         </div>
