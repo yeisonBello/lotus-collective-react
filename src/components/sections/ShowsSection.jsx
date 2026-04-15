@@ -16,11 +16,8 @@ const ShowsSection = () => {
         const data = await fetchShowsFromSheets(SHEET_CSV_URL);
         if (data && data.length > 0) {
           setShows(data);
-        } else {
-          console.warn('No data returned from sheets, sticking with initialShows');
         }
-      } catch (error) {
-        console.warn('Error loading shows from sheets, using local fallback:', error);
+      } catch {
       } finally {
         setLoading(false);
       }
