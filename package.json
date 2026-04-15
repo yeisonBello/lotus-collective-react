@@ -7,9 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "optimize-gallery": "node scripts/optimize-gallery.js"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "framer-motion": "^12.29.2",
     "lucide-react": "^0.563.0",
     "papaparse": "^5.5.3",

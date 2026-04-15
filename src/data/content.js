@@ -204,8 +204,7 @@ export const lotusHouse = {
 };
 
 export const contact = {
-  phone: '+1 305 240 3325',
-  name: 'Ivan Dávila Leyton',
+  email: 'booking@lotuscollective.com',
   message: 'Do you have questions, want to book a show, or collaborate on a new piece? Reach out, and let\'s make magic happen.'
 };
 

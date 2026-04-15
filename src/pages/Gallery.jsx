@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import LotusBentoGallery from '../components/sections/LotusBentoGallery';
 import SoundwaveDivider from '../components/ui/SoundwaveDivider';
-import heroImage from '../assets/gallery/hero-carousel/image-024.jpg';
+import heroImage from '../assets/gallery/hero-carousel/image-024.webp';
 import avatar1 from '../assets/gallery/live-energy/rs=w_984,h_656 (1).webp';
 import avatar2 from '../assets/gallery/archive/rs=w_984,h_740 (1).webp';
 import avatar3 from '../assets/gallery/studio/qt=q_97 (1).webp';

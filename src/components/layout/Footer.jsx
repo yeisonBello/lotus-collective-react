@@ -107,7 +107,7 @@ const Footer = () => {
                 maxWidth: '400px'
               }}
             >
-              "Tropical Impressionism from the heart of Miami."
+              "Latin Jazz Funk from Miami."
             </p>
 
             <motion.div

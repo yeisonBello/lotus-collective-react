@@ -47,15 +47,15 @@ const Navbar = () => {
         >
           The Journey
         </a>
-        <a
-          href="/#music"
+        <Link
+          to="/discography"
           className="transition-colors"
           style={{ transitionDuration: 'var(--timing-quarter)' }}
           onMouseEnter={(e) => e.target.style.color = 'var(--brass-bright)'}
           onMouseLeave={(e) => e.target.style.color = 'white'}
         >
           Discography
-        </a>
+        </Link>
         <a
           href="/#collective"
           className="transition-colors"
@@ -150,14 +150,14 @@ const Navbar = () => {
         >
           The Journey
         </a>
-        <a
-          href="/#music"
+        <Link
+          to="/discography"
           className="text-2xl font-serif-display transition-colors"
           style={{ color: 'var(--white-mute)' }}
           onClick={closeMenu}
         >
           Discography
-        </a>
+        </Link>
         <a
           href="/#collective"
           className="text-2xl font-serif-display transition-colors"

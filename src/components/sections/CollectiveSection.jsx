@@ -1,64 +1,64 @@
 const members = [
-  {
-    name: 'Ivan Lotus',
-    role: 'Frontman / Keys',
-    color: '#FF3B30',
-    image: '/assets/profile_photo/ivan.webp',
-    spiritAnimal: '/assets/profile_photo/leon.png',
-    social: {
-    instagram: 'https://www.instagram.com/ivanlotus_/',
-      facebook: '#',
-      email: 'mailto:ivan@lotuscollective.com'
-    }
-  },
-  {
-    name: 'Samuel Little',
-    role: 'Frontman / Bass',
-    color: '#10b981',
-    image: '/assets/profile_photo/sam.webp',
-    spiritAnimal: '/assets/profile_photo/panther.png',
-    social: {
-    instagram: 'https://www.instagram.com/samiheadd/?hl=en',
-      facebook: '#',
-      email: 'mailto:sam@lotuscollective.com'
-    }
-  },
-  {
-    name: 'Julián Bermudez',
-    role: 'Keyboard',
-    color: '#6366f1',
-    image: '/assets/profile_photo/julian.webp',
-    spiritAnimal: '/assets/profile_photo/turtle.png',
-    social: {
-    instagram: 'https://www.instagram.com/bad_juju_bad/?hl=en',
-      facebook: '#',
-      email: 'mailto:julian@lotuscollective.com'
-    }
-  },
-  {
-    name: 'Marcelo Romero',
-    role: 'Saxofone',
-    color: '#14b8a6',
-    image: '/assets/profile_photo/marcelo.webp',
-    spiritAnimal: '/assets/profile_photo/Polecat.png',
-    social: {
-    instagram: 'https://www.instagram.com/mromero_/?hl=en',
-      facebook: '#',
-      email: 'mailto:marcelo@lotuscollective.com'
-    }
-  },
-  {
-    name: 'Marvin Clairsaint',
-    role: 'Drums',
-    color: '#f97316',
-    image: '/assets/profile_photo/marvin.webp',
-    spiritAnimal: '/assets/profile_photo/bear.png',
-    social: {
-    instagram: 'https://www.instagram.com/muzix_martian/?hl=en',
-      facebook: '#',
-      email: 'mailto:marvin@lotuscollective.com'
-    }
-  },
+    {
+        name: 'Ivan Lotus',
+        role: 'Guitar/Vocals',
+        color: '#FF3B30',
+        image: '/assets/profile_photo/ivan.webp',
+        spiritAnimal: '/assets/profile_photo/leon.png',
+        social: {
+            instagram: 'https://www.instagram.com/ivanlotus_/',
+            facebook: '#',
+            email: 'mailto:ivan@lotuscollective.com'
+        }
+    },
+    {
+        name: 'Samuel Little',
+        role: 'Bass',
+        color: '#10b981',
+        image: '/assets/profile_photo/sam.webp',
+        spiritAnimal: '/assets/profile_photo/panther.png',
+        social: {
+            instagram: 'https://www.instagram.com/samiheadd/?hl=en',
+            facebook: '#',
+            email: 'mailto:sam@lotuscollective.com'
+        }
+    },
+    {
+        name: 'Julián Bermudez',
+        role: 'Keyboard',
+        color: '#6366f1',
+        image: '/assets/profile_photo/julian.webp',
+        spiritAnimal: '/assets/profile_photo/turtle.png',
+        social: {
+            instagram: 'https://www.instagram.com/bad_juju_bad/?hl=en',
+            facebook: '#',
+            email: 'mailto:julian@lotuscollective.com'
+        }
+    },
+    {
+        name: 'Marcelo Romero',
+        role: 'Saxophone',
+        color: '#14b8a6',
+        image: '/assets/profile_photo/marcelo.webp',
+        spiritAnimal: '/assets/profile_photo/Polecat.png',
+        social: {
+            instagram: 'https://www.instagram.com/mromero_/?hl=en',
+            facebook: '#',
+            email: 'mailto:marcelo@lotuscollective.com'
+        }
+    },
+    {
+        name: 'Marvin Clairsaint',
+        role: 'Drums',
+        color: '#f97316',
+        image: '/assets/profile_photo/marvin.webp',
+        spiritAnimal: '/assets/profile_photo/bear.png',
+        social: {
+            instagram: 'https://www.instagram.com/muzix_martian/?hl=en',
+            facebook: '#',
+            email: 'mailto:marvin@lotuscollective.com'
+        }
+    },
 ];
 
 import { Facebook, Instagram, Mail } from 'lucide-react';
@@ -120,31 +120,31 @@ const CollectiveSection = () => {
                                     >
                                         {member.role}
                                     </p>
-                                    
+
                                     {/* Social Icons - Visible on Hover */}
                                     <div className="flex gap-4 mt-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 ease-out">
-                                        <a 
-                                            href={member.social.instagram} 
-                                            target="_blank" 
-                                            rel="noopener noreferrer" 
+                                        <a
+                                            href={member.social.instagram}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="text-zinc-400 hover:text-[#d4af37] transition-colors"
                                             aria-label={`${member.name} Instagram`}
                                             onClick={(e) => e.stopPropagation()}
                                         >
                                             <Instagram size={20} />
                                         </a>
-                                        <a 
-                                            href={member.social.facebook} 
-                                            target="_blank" 
-                                            rel="noopener noreferrer" 
+                                        <a
+                                            href={member.social.facebook}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="text-zinc-400 hover:text-[#d4af37] transition-colors"
                                             aria-label={`${member.name} Facebook`}
                                             onClick={(e) => e.stopPropagation()}
                                         >
                                             <Facebook size={20} />
                                         </a>
-                                        <a 
-                                            href={member.social.email} 
+                                        <a
+                                            href={member.social.email}
                                             className="text-zinc-400 hover:text-[#d4af37] transition-colors"
                                             aria-label={`Email ${member.name}`}
                                             onClick={(e) => e.stopPropagation()}

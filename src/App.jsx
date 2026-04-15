@@ -11,6 +11,8 @@ import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import FloatingAudioControl from './pages/FloatingAudioControl';
 import FloatingEPKControl from './pages/FloatingEPKControl';
+import AdminGallery from './pages/AdminGallery';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
           <Route path="/book" element={<Contact />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/moments-admin" element={<AdminGallery />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
 
         {/* Footer */}
