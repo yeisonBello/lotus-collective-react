@@ -6,12 +6,8 @@ import BandStory from '../components/sections/BandStory';
 import DiscographySection from '../components/sections/DiscographySection';
 import CollectiveSection from '../components/sections/CollectiveSection';
 import ShowsSection from '../components/sections/ShowsSection';
- import VisualMoments from '../components/sections/VisualMoments';
+import VisualMoments from '../components/sections/VisualMoments';
 import VisualBreathingPoint from '../components/sections/VisualBreathingPoint';
-import { gallery } from '../data/content';
-import LotusBentoGallery from '../components/sections/LotusBentoGallery';
-import FloatingAudioControl from './FloatingAudioControl';
-import FloatingEPKControl from './FloatingEPKControl';
 
 const Home = () => {
   const location = useLocation();
@@ -46,8 +42,6 @@ const Home = () => {
       <CollectiveSection />
       <VisualBreathingPoint text="Feel the rhythm" />
       <ShowsSection />
-      <FloatingAudioControl />
-      <FloatingEPKControl />
     </main>
   );
 };
