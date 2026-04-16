@@ -23,9 +23,7 @@ const VisualMoments = ({ data }) => {
     <section className="py-20 bg-zinc-950 relative overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/assets/background/palma.png')" }}>
       {/* Overlay oscuro para asegurar legibilidad del texto */}
       <div className="absolute inset-0 bg-black/30"></div>
-      {/* Decoración Tropical */}
-      <img src="/assets/palm-left.png" alt="" className="absolute -left-20 top-1/2 -translate-y-1/2 w-[500px] opacity-10 pointer-events-none blur-sm rotate-12" />
-      <img src="/assets/palm-right.png" alt="" className="absolute -right-20 top-1/2 -translate-y-1/2 w-[500px] opacity-10 pointer-events-none blur-sm -rotate-12" />
+      {/* Decoración Tropical removida porque las imágenes faltaban en el proyecto y generaban 404 */}
 
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center relative z-10">
 

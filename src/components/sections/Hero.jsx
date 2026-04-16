@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 
 // Sub-component for individual organic floating effects
@@ -19,6 +19,14 @@ const FloatingCover = ({ children, delay = 0, duration = 5 }) => (
 const Hero = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const { scrollYProgress } = useScroll();
+
+  // Failsafe to ensure site loads even if video takes too long or fails
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVideoLoaded(true);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Scroll-based parallax and fade effects
   const yParallax = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
