@@ -4,6 +4,7 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import FloatingAudioControl from './pages/FloatingAudioControl';
 import FloatingEPKControl from './pages/FloatingEPKControl';
+import SubscriptionPopup from './components/ui/SubscriptionPopup';
 
 // Home loads eagerly (landing page), everything else loads on demand
 import Home from './pages/Home';
@@ -60,6 +61,9 @@ function App() {
         {/* Floating Controls */}
         <FloatingAudioControl />
         <FloatingEPKControl />
+
+        {/* Subscription Popup — appears after 90 s */}
+        <SubscriptionPopup buttonText="Subscribe" />
       </div>
     </Router>
   );

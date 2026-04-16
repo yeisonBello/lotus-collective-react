@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Image, Trash2, Home, RefreshCw, Upload, Camera, Film, Mic, Music, Archive, Zap, Calendar, ExternalLink } from 'lucide-react';
+import { Image, Trash2, Home, RefreshCw, Upload, Camera, Film, Mic, Music, Archive, Zap, Calendar, ExternalLink, Settings } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { lotusImages } from '../constants/galleryData.js';
 
@@ -16,6 +16,11 @@ const CATEGORIES = [
 const AdminGallery = () => {
   const [activeTab, setActiveTab] = useState('visualMoments');
   const [allImages, setAllImages] = useState(lotusImages);
+
+  const handleResetDismissed = () => {
+    localStorage.removeItem('lotus_popup_dismissed');
+    alert("Popup state reset successfully. It will appear on the next page load.");
+  };
 
   const currentCategory = CATEGORIES.find(c => c.id === activeTab);
   const images = allImages[activeTab] || [];
@@ -101,6 +106,31 @@ const AdminGallery = () => {
                     Edit Show Dates
                     <ExternalLink size={16} />
                 </a>
+            </div>
+
+            {/* Popup Configuration */}
+            <div className="lg:col-span-3 bg-gradient-to-br from-[#1a1a1a] to-black border border-white/10 p-8 rounded-3xl group transition-all">
+                <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 bg-[#FF3B30]/10 rounded-2xl flex items-center justify-center text-[#FF3B30]">
+                        <Settings size={24} />
+                    </div>
+                    <h2 className="text-xl font-bold">Popup Testing Tool</h2>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    {/* Reset State */}
+                    <div className="bg-zinc-900/50 p-4 rounded-2xl border border-white/5 flex items-center justify-center">
+                        <button 
+                            onClick={handleResetDismissed}
+                            className="w-full py-3 bg-zinc-800 hover:bg-zinc-700 transition-colors rounded-xl font-bold text-sm text-[#FF3B30]"
+                        >
+                            Reset Test State
+                        </button>
+                    </div>
+                    <div className="md:col-span-3 flex items-center text-zinc-400 text-sm">
+                        <p>This button clears your browser's local memory so you can see the popup again without waiting for a new session. (Only affects your browser).</p>
+                    </div>
+                </div>
             </div>
         </div>
 
