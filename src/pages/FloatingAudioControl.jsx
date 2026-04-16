@@ -64,7 +64,7 @@ const FloatingAudioControl = () => {
     {/* Elemento de audio oculto. Asegúrate de que el archivo exista en public/assets/music/ */}
     <audio 
       ref={audioRef} 
-      src="/assets/music/tu-cancion.mp3" 
+      src="/assets/music/tu-cancion-v2.mp3"  
       onEnded={() => setIsPlaying(false)} 
     />
     <motion.button

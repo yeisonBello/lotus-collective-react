@@ -81,7 +81,7 @@ const Hero = () => {
             onCanPlayThrough={() => setIsVideoLoaded(true)}
             className="w-full h-full object-cover opacity-50"
           >
-            <source src="/assets/videos/lotus-bloom.mp4" type="video/mp4" />
+            <source src="/assets/videos/lotus-bloom-v2.mp4" type="video/mp4" />
           </video>
           {/* Visual gradient to protect text legibility */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black"></div>
