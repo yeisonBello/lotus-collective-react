@@ -203,7 +203,7 @@ const Footer = () => {
               <div className="flex flex-wrap gap-3">
                 {/* Instagram */}
                 <a
-                  href="https://instagram.com/lotuscollective"
+                  href="https://www.instagram.com/lotuscollectivemusic"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full border flex items-center justify-center transition-all"

@@ -62,7 +62,7 @@ function App() {
         <FloatingAudioControl />
         <FloatingEPKControl />
 
-        {/* Subscription Popup — appears after 90 s */}
+        {/* Subscription Popup — appears after 30 s */}
         <SubscriptionPopup buttonText="Subscribe" />
       </div>
     </Router>

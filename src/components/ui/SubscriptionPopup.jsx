@@ -6,12 +6,12 @@ const MAILCHIMP_URL =
   'https://lotuscollectivemusic.us21.list-manage.com/subscribe/post?u=9b5af858b2d624b06eb49323f&id=f30e838558&f_id=000297e6f0';
 
 const STORAGE_KEY = 'lotus_popup_dismissed';
-const POPUP_DELAY_MS = 90_000; // 90 seconds
+const POPUP_DELAY_MS = 30_000; // 30 seconds
 
 /**
  * SubscriptionPopup
  *
- * Renders a full-screen overlay popup after a configurable delay (default 90 s).
+ * Renders a full-screen overlay popup after a configurable delay (default 30 s).
  * Once the user dismisses or successfully subscribes, a flag is stored in
  * localStorage so the popup won't reappear during future visits.
  *

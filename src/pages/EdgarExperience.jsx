@@ -1,8 +1,13 @@
+import SEO from '../components/SEO';
 import BandStory from '../components/sections/BandStory';
 
 const EdgarExperience = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="The Edgar Experience" 
+        description="Discover the journey that shaped Lotus Collective and the mystery of Edgar's disappearance." 
+      />
       {/* Hero Header */}
       <div className="pt-32 pb-16 px-6 text-center max-w-3xl mx-auto">
         <p className="text-[10px] uppercase tracking-[0.3em] text-zinc-400 mb-4">

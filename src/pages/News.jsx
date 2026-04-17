@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import { gallery } from '../data/content';
 
 const News = () => {
@@ -19,6 +20,10 @@ const News = () => {
 
   return (
     <div className="min-h-screen pt-20">
+      <SEO 
+        title="News & Events" 
+        description="Stay connected with the latest from Lotus Collective. Show recaps, behind-the-scenes content, and Miami music culture." 
+      />
       <div className="max-w-6xl mx-auto px-6 md:px-12 py-20">
         <div className="mb-16">
           <h1 className="font-serif-display text-6xl md:text-8xl mb-6">

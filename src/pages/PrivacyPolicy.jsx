@@ -1,7 +1,9 @@
 import React from "react";
+import SEO from '../components/SEO';
 
 const PrivacyPolicy = () => (
   <div className="max-w-2xl mx-auto py-16 px-4 md:px-0">
+    <SEO title="Privacy Policy" description="Privacy policy for Lotus Collective website." />
     <h1 className="text-3xl md:text-4xl font-sans tracking-widest mb-8 text-gray-100" style={{ letterSpacing: '0.15em', fontWeight: 400 }}>
       Privacy Policy
     </h1>

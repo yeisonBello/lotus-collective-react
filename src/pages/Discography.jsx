@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import AlbumCard from '../components/ui/AlbumCard';
 import SmartLinkModal from '../components/ui/SmartLinkModal';
 import SoundwaveDivider from '../components/ui/SoundwaveDivider';
@@ -51,6 +52,10 @@ const Discography = () => {
 
   return (
     <div className="min-h-screen pt-32 pb-20 bg-black overflow-hidden relative">
+      <SEO 
+        title="Discography" 
+        description="Listen to Where Is Edgar? and other Lotus Collective releases." 
+      />
       {/* Background Texture Overlay */}
       <div className="texture-overlay absolute inset-0 z-0 pointer-events-none opacity-20" />
 

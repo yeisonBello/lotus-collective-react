@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useForm, ValidationError } from '@formspree/react';
+import SEO from '../components/SEO';
 
 const Contact = () => {
     // Inicializamos el hook con tu ID de Formspree
@@ -19,6 +20,7 @@ const Contact = () => {
     if (state.succeeded) {
         return (
             <div className="w-full min-h-screen bg-black flex items-center justify-center">
+                <SEO title="Message Sent" description="Your message has been sent successfully." />
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -39,6 +41,10 @@ const Contact = () => {
 
     return (
         <div className="w-full min-h-screen bg-black pt-32 pb-20 px-6 md:px-12 relative overflow-hidden">
+            <SEO 
+                title="Contact & Booking" 
+                description="Book Lotus Collective. Bring the tropical impressionism and neon funk of Lotus Collective to your next event." 
+            />
             {/* Background Gradients */}
             <div className="fixed inset-0 pointer-events-none">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--brass-dark)] opacity-10 blur-[120px] rounded-full mix-blend-screen" />

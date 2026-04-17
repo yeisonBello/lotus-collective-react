@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 import Hero from '../components/sections/Hero';
 import LatestVideo from '../components/sections/LatestVideo';
 import BandStory from '../components/sections/BandStory';
@@ -29,6 +30,10 @@ const Home = () => {
 
   return (
     <main>
+      <SEO 
+        title="Miami Roots, Funk Soul" 
+        description="Lotus Collective is a Miami-based band blending jazz, funk, and latin soul." 
+      />
       <Hero />
       <VisualBreathingPoint text="MIAMI ROOTS, FUNK SOUL" />
       <LatestVideo showText={false} />

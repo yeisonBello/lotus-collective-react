@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import SEO from '../components/SEO';
 import LotusBentoGallery from '../components/sections/LotusBentoGallery';
 import SoundwaveDivider from '../components/ui/SoundwaveDivider';
 import heroImage from '../assets/gallery/hero-carousel/image-024.webp';
@@ -40,6 +41,10 @@ const Gallery = () => {
 
     return (
         <main className="min-h-screen bg-black overflow-x-hidden">
+            <SEO 
+                title="Gallery" 
+                description="A visual journey through performances, studio sessions, and the vibrant energy of the collective." 
+            />
             {/* Impact Header */}
             <header className="relative h-[80vh] w-full flex items-center justify-center overflow-hidden">
                 {/* Hero Background */}
